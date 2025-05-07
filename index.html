@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Quote Generator</h1>
+        <div class="controls">
+            <div class="select-group">
+                <label for="author-select">Author:</label>
+                <select id="author-select">
+                    <option value="all">All Authors</option>
+                    <option value="lebron">LeBron James</option>
+                    <option value="mcdavid">Connor McDavid</option>
+                    <option value="jd">JD Vance</option>
+                    <option value="jobs">Steve Jobs</option>
+                    <option value="einstein">Albert Einstein</option>
+                    <option value="mandela">Nelson Mandela</option>
+                    <option value="lky">Lee Kuan Yew</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="font-select">Font:</label>
+                <select id="font-select">
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Playfair Display">Playfair Display</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Lato">Lato</option>
+                    <option value="Wingdings">Wingdings</option>
+                    <option value="Comic Sans MS">Recacted</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="timer-condition">Timer Stops On:</label>
+                <select id="timer-condition">
+                    <option value="none">No Timer</option>
+                    <option value="author">Specific Author</option>
+                    <option value="quote">Specific Quote</option>
+                    <option value="font">Specific Font</option>
+                </select>
+            </div>
+            <div class="select-group" id="condition-value-group" style="display: none;">
+                <label for="condition-value">Value:</label>
+                <input type="text" id="condition-value" placeholder="Enter condition value">
+            </div>
+        </div>
+        <div class="timer-display">
+            <span id="timer">00:00:00</span>
+            <div class="timer-controls">
+                <button id="reset-timer">Reset Timer</button>
+                <span class="hotkey">Press R to reset</span>
+            </div>
+            <div class="timer-controls">
+                <button id="toggle-timer">Start Timer</button>
+                <span class="hotkey">Press T to toggle</span>
+            </div>
+        </div>
+        <div class="quote-box">
+            <div class="quote-content">
+                <p class="quote">Click the button to generate a quote!</p>
+                <p class="author"></p>
+                <span class="hotkey">Press Space to generate</span>
+            </div>
+        </div>
+        <button id="generate-btn">Generate Quote</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
